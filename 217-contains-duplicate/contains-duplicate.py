@@ -1,5 +1,6 @@
 class Solution(object):
     def containsDuplicate(self, nums):
-        if len(nums)!=len(list(set(nums))):
+        a=set(nums)
+        if len(nums)!=len(list(a)):
             return True
         return False
