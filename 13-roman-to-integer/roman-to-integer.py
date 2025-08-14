@@ -4,10 +4,15 @@ class Solution(object):
         "I": 1, "V": 5, "X": 10,
         "L": 50, "C": 100, "D": 500, "M": 1000}
         total = 0
-        for i in range(len(s)):
-            if i + 1 < len(s) and values[s[i]] < values[s[i+1]]:
-                total -= values[s[i]]
+        prev_value = 0
+
+        # Process from right to left
+        for ch in reversed(s):
+            value = values[ch]
+            if value < prev_value:
+                total -= value
             else:
-                total += values[s[i]]
+                total += value
+            prev_value = value
+
         return total
-            
