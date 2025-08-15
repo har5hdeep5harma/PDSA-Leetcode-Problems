@@ -3,7 +3,7 @@ class Solution(object):
         a = s.lower().split()
         b = ""
         for word in a:
-            for ch in word:
-                if ch.isalnum(): 
-                    b += ch
+            for c in word:
+                if c.isalnum(): 
+                    b += c
         return b == b[::-1]
