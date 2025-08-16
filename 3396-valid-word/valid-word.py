@@ -4,7 +4,9 @@ class Solution(object):
         m=0
         k=0
         al=['a', 'e', 'i', 'o', 'u']
-        if len(word)>=3:
+        if len(word)<3:
+            return False
+        else:
             if word.isalnum():
                 for n in word.lower():
                     if n in al:
