@@ -6,11 +6,9 @@ class Solution(object):
         """
         se=0
         so=0
-        for i in range(1,(n*2)+1):
-            if i%2==0:
-                se+=i
-            else:
-                so+=i  
+        for i in range(1,n+1):
+            se+=i*2
+            so+=(i*2)-1
         m=se if se>so else so
         n=so if se>so else se
         r=m%n
