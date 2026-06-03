@@ -4,13 +4,10 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        se=0
-        so=0
-        for i in range(1,n+1):
-            se+=i*2
-            so+=(i*2)-1
-        m=se if se>so else so
-        n=so if se>so else se
+        se=n*(n+1)
+        so=n*n
+        m=se
+        n=so
         r=m%n
 
         while(r!=0):
